@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haki_mkononi - Justice Reimagined</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a73e8;
+            --secondary-blue: #0d47a1;
+            --accent-color: #4CAF50;
+            --background-light: #f4f7f6;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+        }
+
+        .logo i {
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .cta-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        .signup-form {
+            background-color: var(--background-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .features {
+            background-color: var(--background-light);
+            padding: 80px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .testimonials {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--background-light);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 50px 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .hero, .feature-grid, .testimonial-grid {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content, .hero-image {
+                width: 100%;
+                padding: 0;
+            }
+
+            .nav-links {
+                display: none; /* Mobile menu would be implemented here */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <i class="fas fa-balance-scale"></i>
+                Haki_mkononi
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Solutions</a>
+                <a href="#">For Lawyers</a>
+                <a href="#">Marketplace</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>Justice in Your Hands: Transforming Legal Services</h1>
+                <p>Haki_mkononi is a revolutionary platform that connects legal professionals with citizens, making legal services accessible, transparent, and efficient.</p>
+                
+                <div class="cta-section">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Get Started Now
+                    </a>
+                    <p>No credit card required • Free 30-day trial</p>
+                </div>
+            </div>
+            <div class="signup-form">
+                <h3>Start Your Legal Journey</h3>
+                <form>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Professional Email" required>
+                    <input type="tel" placeholder="Phone Number (Optional)">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Create Free Account
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="features container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Case Marketplace</h3>
+                    <p>Connect with potential cases and expand your professional network instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Citizen Empowerment</h3>
+                    <p>Simplify legal processes and make justice accessible to everyone.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Smart Case Management</h3>
+                    <p>Advanced tools for tracking, documenting, and managing legal cases efficiently.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials container">
+            <h2>Trusted by Legal Professionals</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Haki_mkononi has transformed how I find and manage cases."</p>
+                    <strong>- Michael K., Senior Lawyer</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Finally, a platform that makes legal services transparent and accessible."</p>
+                    <strong>- Sarah L., Legal Consultant</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"An innovative solution that bridges the gap between lawyers and citizens."</p>
+                    <strong>- David R., Legal Tech Expert</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Haki_mkononi. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
